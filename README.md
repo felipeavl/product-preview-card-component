@@ -27,3 +27,4 @@ Users should be able to:
 ### Built with
 
 - HTML and CSS only
+- Used only rem for font sizes.
