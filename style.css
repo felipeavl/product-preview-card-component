@@ -1,0 +1,168 @@
+:root {
+  --pure-white: hsl(0, 0%, 100%);
+  --deep-aquamarine: hsl(157, 36%, 37%);
+  --deep-aquamarine-hover: hsl(157, 43%, 18%);
+  --cream: hsl(30, 38%, 92%);
+  --aurometalsaurus: hsl(228, 12%, 48%);
+  --gunmetal: hsl(212, 21%, 14%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*
+font-family: 'Fraunces', serif;
+font-family: 'Montserrat', sans-serif;
+*/
+
+body {
+  background-color: var(--cream);
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+    width: 600px;
+    height: 450px;
+    background-color: var(--pure-white);
+    margin: 28px 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+}
+
+.image {
+    background-image: url("assets/image-product-desktop.jpg");
+    background-size: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 375px) {
+    .card {
+        width: 90%;
+        height: 600px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .image {
+        background-image: url("assets/image-product-mobile.jpg");
+        background-size: cover;
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+    justify-content: space-between;
+}
+
+.product-type {
+    color: var(--aurometalsaurus);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.product-name {
+  font-family: 'Fraunces', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gunmetal);
+}
+
+.product-info {
+  font-size: 0.875rem;
+  line-height: 2;
+  color: var(--aurometalsaurus);
+}
+
+.price {
+  display: flex;
+  gap: 20px;
+  font-family: 'Fraunces', serif;
+  align-items: center;
+}
+
+.new-price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--deep-aquamarine);
+}
+
+.old-price {
+  font-size: 0.813rem;
+  color: var(--aurometalsaurus);
+  text-decoration: line-through;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+button {
+  background-color: var(--deep-aquamarine);
+  border-radius: 8px;
+  border: none;
+  height: 48px;
+  color: var(--pure-white);
+  font-weight: 700;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--deep-aquamarine-hover);
+}
